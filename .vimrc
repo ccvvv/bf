@@ -10,7 +10,9 @@ autocmd BufNewFile *.cpp,*.[ch],*.sh,*.java exec ":call SetTitle()"
 ""定义函数SetTitle，自动插入文件头 
 func SetTitle() 
 	if &filetype == 'c'
+""		call append(line("0"), "#include<stdio.h>")
 		call append(line("0"), "#include<stdio.h>")
+		call append(line("0")+1,"int main(void)") 
 		call append(line("."), "")
 	endif
 	autocmd BufNewFile * normal G
