@@ -1,3 +1,4 @@
+//P72 4.1
 #include<stdio.h>
 #include<string.h>
 #define DENSITY  62.4 //density 密度
